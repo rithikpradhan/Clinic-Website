@@ -18,7 +18,7 @@ export default function Header() {
           <div className={styles.logoMark}>
             <div className={styles.logoDot}></div>
           </div>
-          <Link href="/" className={styles.logoText}>Aura Clinic</Link>
+          <Link href="/" className={styles.logoText}>Zenvia Care</Link>
         </div>
         
         <nav className={styles.nav}>

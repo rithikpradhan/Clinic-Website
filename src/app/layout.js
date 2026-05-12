@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Aura Clinic | Digital Wellness",
+  title: "Zenvia Care | Digital Wellness",
   description: "A gentle approach to digital wellness and modern clinical care.",
 };
 
