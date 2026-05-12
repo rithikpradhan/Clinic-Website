@@ -1,0 +1,163 @@
+.section {
+  padding: 120px 0;
+  position: relative;
+  background-color: var(--bg-color); 
+}
+
+.heading {
+  text-align: center;
+  font-size: clamp(32px, 5vw, 48px);
+  margin-bottom: 80px;
+  color: var(--text-primary);
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 0; /* Cards touch or are very close. Let's add slight gap */
+  flex-wrap: wrap;
+  align-items: center; 
+}
+
+.card {
+  width: 280px;
+  background-color: #F9F9F9;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: visible; /* so badge doesn't clip */
+  margin: 12px;
+}
+
+.popularCard {
+  width: 300px;
+  transform: scale(1.05);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.popularCard:hover {
+  transform: scale(1.08);
+}
+
+.card:not(.popularCard):hover {
+  transform: translateY(-10px);
+  z-index: 5;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.cardHeader {
+  position: relative;
+  padding: 40px 20px 60px 20px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 24px 24px 0 0;
+}
+
+.badgeWrapper {
+  position: absolute;
+  top: -14px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.badge {
+  background-color: #ffffff;
+  color: #4A00E0;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.desc {
+  font-size: 11px;
+  opacity: 0.9;
+  line-height: 1.4;
+  margin-bottom: 24px;
+  white-space: pre-line;
+}
+
+.priceContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.currency {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.price {
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.billing {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.curve {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+}
+
+.cardBody {
+  padding: 0 24px 40px 24px;
+  background-color: #F9F9F9;
+  flex-grow: 1;
+  text-align: center;
+  border-radius: 0 0 24px 24px;
+}
+
+.benefitsTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.benefitsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefitsList li {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+@media (max-width: 1200px) {
+  .popularCard {
+    transform: none;
+    width: 280px;
+  }
+  .popularCard:hover {
+    transform: translateY(-10px);
+  }
+}

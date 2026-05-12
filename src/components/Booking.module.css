@@ -1,0 +1,127 @@
+.section {
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.bgGradients {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+}
+
+.blobSage {
+  width: 400px;
+  height: 400px;
+  background-color: var(--color-sage);
+  top: 10%;
+  left: 20%;
+}
+
+.blobCoral {
+  width: 300px;
+  height: 300px;
+  background-color: var(--color-coral);
+  bottom: 10%;
+  right: 20%;
+  opacity: 0.3;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+}
+
+.iconBox {
+  width: 64px;
+  height: 64px;
+  background-color: #292524;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-coral);
+  border-radius: 50%;
+}
+
+.heading {
+  font-size: clamp(36px, 5vw, 56px);
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.subheading {
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+.form {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+}
+
+.input {
+  flex-grow: 1;
+  padding: 0 24px;
+  height: 56px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-border);
+  background-color: #fafaf9; /* stone-50 */
+  font-family: var(--font-primary);
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  border-color: var(--text-primary);
+}
+
+.submitBtn {
+  height: 56px;
+  padding: 0 32px;
+  border-radius: 9999px;
+  background-color: #292524; /* black/stone */
+  color: #ffffff;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.submitBtn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+@media (max-width: 576px) {
+  .form {
+    flex-direction: column;
+  }
+}

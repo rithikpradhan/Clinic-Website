@@ -1,0 +1,158 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.6;
+  z-index: -1;
+  
+}
+
+.blobCoral {
+  width: 600px;
+  height: 600px;
+  background-color: #FFE4E1;
+  top: -100px;
+  right: -100px;
+}
+
+.blobLavender {
+  width: 500px;
+  height: 500px;
+  background-color: #E6E6FA;
+  bottom: -100px;
+  left: -100px;
+}
+
+.marqueeContainer {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0.04;
+}
+
+.marquee {
+  font-size: 160px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  display: flex;
+  margin-bottom: -10px;
+}
+
+.headlineWrapper {
+  margin-bottom: 48px;
+  z-index: 10;
+  max-width: 900px;
+  position: relative;
+}
+
+.headlineWord {
+  font-size: clamp(56px, 8vw, 96px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text-primary);
+  display: inline-block;
+}
+
+.cursive {
+  font-family: var(--font-accent);
+  font-size: clamp(80px, 10vw, 130px);
+  color: var(--color-coral);
+  font-weight: 400;
+  position: relative;
+  top: 8px;
+  transform: rotate(-5deg);
+  display: inline-block;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+  max-width: 800px;
+  margin-top: 50px;
+}
+
+.subheadline {
+  font-size: 18px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 40px;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+}
+
+.primaryBtn {
+  padding: 18px 36px;
+  border-radius: 9999px;
+  background-color: var(--text-primary);
+  color: #ffffff;
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.primaryBtn:hover {
+  transform: scale(1.02);
+  background-color: #1a1818;
+}
+
+.secondaryBtn {
+  padding: 18px 36px;
+  border-radius: 9999px;
+  background-color: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 16px;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.secondaryBtn:hover {
+  transform: scale(1.02);
+  background-color: #fafafa;
+}
+
+@media (max-width: 576px) {
+  .ctaGroup {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+  }
+}

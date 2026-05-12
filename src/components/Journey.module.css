@@ -1,0 +1,112 @@
+.section {
+  padding: 120px 0;
+  background-color: #ffffff; /* Contrast against the main off-white background */
+  position: relative;
+  overflow: hidden;
+}
+
+.heading {
+  text-align: center;
+  font-size: clamp(32px, 5vw, 48px);
+  margin-bottom: 80px;
+  color: var(--text-primary);
+}
+
+.timelineWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 1400px; /* Provides enough scroll height for the animation */
+  margin: 0 auto;
+}
+
+.svgContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px; /* Enough width for the bezier curve to swing */
+  height: 100%;
+  z-index: 1;
+}
+
+.svgLine {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.stepsContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.step {
+  position: absolute;
+  width: calc(50% - 120px);
+  background: var(--bg-color); /* Matches the main theme off-white */
+  padding: 40px;
+  border-radius: 32px;
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
+  border: 1px solid var(--color-border);
+}
+
+.leftStep {
+  left: 0;
+  text-align: right;
+}
+
+.rightStep {
+  right: 0;
+  text-align: left;
+}
+
+.stepNumber {
+  font-family: var(--font-accent);
+  font-size: 64px;
+  color: var(--color-coral);
+  line-height: 1;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.stepTitle {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.stepDesc {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 900px) {
+  .step {
+    width: calc(50% - 60px);
+    padding: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .timelineWrapper {
+    height: 1000px;
+  }
+
+  .svgContainer {
+    left: 20px; /* Move the line to the far left on mobile */
+    transform: none;
+    width: 150px;
+  }
+  
+  .step {
+    width: calc(100% - 80px);
+    left: 80px !important; /* Force all steps to the right of the line */
+    text-align: left; /* Force left alignment */
+    padding: 24px;
+  }
+}
